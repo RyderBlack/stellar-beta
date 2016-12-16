@@ -208,7 +208,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             moveAndRemove = SKAction.sequence([movePipes, removePipes])
             
             Ghost.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-            Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 90))
+            Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
         }
         else{
             
@@ -218,7 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             else{
                 Ghost.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-                Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 90))
+                Ghost.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 70))
             }
             
         }
@@ -240,10 +240,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         
-        
-        
-        
-        
+
         
     }
     
@@ -268,8 +265,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let topWall = SKSpriteNode(imageNamed: "Wall")
         let btmWall = SKSpriteNode(imageNamed: "Wall")
         
-        topWall.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 + 350)
-        btmWall.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 - 350)
+        topWall.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 + 400)
+        btmWall.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 - 400)
         
         topWall.setScale(0.5)
         btmWall.setScale(0.5)
